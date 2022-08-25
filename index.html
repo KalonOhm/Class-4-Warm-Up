@@ -12,12 +12,16 @@
 
     <script>
 function findWaldo(group) {
-  group.forEach(element => {
-    if (element == 'Waldo') {
-        group[element] = 'Found Waldo!'
+//   group.forEach(element => {
+    let foundWaldos = [];
+    for (let i=0; i <= group.lenght; i++) {
+        if (group[i] === 'Waldo') {
+           foundWaldos.push('Found Waldo!')
+    } else {
+        foundWaldos.push(group[i]);
     }
-  });
-  console.log(group);
+  };
+  return foundWaldos;
 }
 
 
